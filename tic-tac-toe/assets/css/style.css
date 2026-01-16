@@ -8,11 +8,11 @@ body {
 /* Title */
 
 .title {
-    color: whitesmoke;
+    color: limegreen;
+    font-size: 3rem;
     font-family: "Creepster", system-ui;
     font-weight: 400;
     font-style: normal;
-    padding-top: 1rem;
     
 }
 
@@ -40,12 +40,19 @@ body {
     border-radius: 1rem;
     border: none;
     font-size: 8vmin;
-    color: red;
+    color: whitesmoke;
     background-color: red;
 }
 
 .box:hover {
     background-color: rgb(245, 151, 151);
+}
+
+/* Disable hover over box once selected */
+
+.box.disabled {
+    pointer-events: none;
+    opacity: 0.7;
 }
 
 /* Reset button */
@@ -57,4 +64,9 @@ body {
     color: whitesmoke;
     border-radius: 1rem;
     border: none;
+}
+
+#reset:hover {
+    background: orange;
+    cursor: pointer;
 }

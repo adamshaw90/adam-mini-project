@@ -67,5 +67,3 @@ function checkWinner() {
   }
   return null;
 }
-
-

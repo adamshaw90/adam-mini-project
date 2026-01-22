@@ -70,3 +70,9 @@ body {
     background: orange;
     cursor: pointer;
 }
+
+#winnerMessage {
+  color: white;
+  font-size: 2rem;
+  margin-top: 1rem;
+}

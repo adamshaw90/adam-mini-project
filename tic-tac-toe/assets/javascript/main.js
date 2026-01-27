@@ -30,6 +30,14 @@ boxes.forEach((box) => {
     return; // Kill the click event handler
 
 }  
+
+    if (checkDraw()) {
+    winnerMessage.textContent = "Draw!";
+    gameOver = true;
+    return;
+}
+
+
     currentPlayer = currentPlayer === "X" ? "O" : "X"; // Switches player
   });
 });
@@ -60,10 +68,20 @@ function checkWinner() {
     let value2 = boxes[b].textContent; // These 3 read the textcontent to see if there is an x or o inside
     let value3 = boxes[c].textContent;
 
-     // This basically means if value is not empty and matches values 2 and 3, then a winner is detected, if not, the loop returns null meaning no winner found yet.
+     // This basically means if value 1 is not empty and matches values 2 and 3, then a winner is detected, if not, the loop returns null meaning no winner found yet.
     if (value1 !== "" && value1 === value2 && value1 === value3) {
       return value1;
     }
   }
   return null;
+}
+
+// Draw logic - this is basically saying if there are any empty boxes, its not a draw but if all the boxes are full then it is a draw.
+function checkDraw() {
+  for (let i = 0; i < boxes.length; i++) {
+    if (boxes[i].textContent === "") {
+      return false;
+    }
+  }
+  return true;
 }

@@ -71,8 +71,12 @@ body {
     cursor: pointer;
 }
 
+/* Winner Message */
+
 #winnerMessage {
-  color: white;
-  font-size: 2rem;
-  margin-top: 1rem;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  margin-top: 0;
+  min-height: 2.5rem;
+  line-height: 2.5rem;
 }
